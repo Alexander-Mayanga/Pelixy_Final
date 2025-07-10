@@ -95,35 +95,8 @@ Conectada directamente al backend oficial, esta app permite:
 
 ## 🗂 7. Estructura del proyecto
 
-com.sise.pelixy/
-├── activity/
-│ ├── BaseDrawerActivity.java
-│ ├── ComentarioActivity.java
-│ ├── CrearCuentaActivity.java
-│ ├── DetailsActivity.java
-│ ├── FavoritosActivity.java
-│ ├── MenuActivity.java
-│ └── PerfilUsuarioActivity.java
-│
-├── adapter/
-│ ├── ComentarioAdapter.java
-│ ├── FavoritosAdapter.java
-│ └── PeliculaAdapter.java
-│
-├── api/
-│ ├── ApiClient.java
-│ └── ApiService.java
-│
-├── manager/
-│ └── FavoritosManager.java
-│
-├── models/
-│ ├── Usuario.java
-│ ├── Pelicula.java
-│ ├── Comentario.java
-│ └── Calificacion.java
-│
-└── MainActivity.java
+![eadme](https://github.com/user-attachments/assets/8abbaa83-1266-4747-8f79-ced455fb69d5)
+
 
 ---
 
@@ -165,6 +138,45 @@ com.sise.pelixy/
 
 🔗 Todos los endpoints se manejan desde `ApiService.java` usando Retrofit.  
 ✔️ Probado previamente con Postman y conectado al siguiente backend:
+
+ Backend conectado
+La app Pelixy está conectada a un backend propio desarrollado con Node.js, Express y PostgreSQL, que expone rutas RESTful bajo el prefijo:
+
+http://localhost:3000/api/v1/
+
+Gestionar usuarios, autenticación y tokens JWT
+
+Servir el catálogo de películas con todos sus detalles
+
+Registrar y devolver comentarios de los usuarios
+
+Registrar calificaciones de 1 a 5 por usuario
+
+Validar accesos y manejar errores
+
+🧪 Postman para pruebas de API
+Se utilizó Postman para probar exhaustivamente todos los endpoints antes de integrarlos en la app móvil.
+
+🔗 Accede a la colección pública de pruebas aquí:
+👉 Pelixy API - Colección pública Postman
+https://documenter.getpostman.com/view/45688757/2sB2x6kXBH
+
+✅ Contiene:
+Login (/auth/login)
+
+Usuarios (/usuarios)
+
+Películas (/peliculas)
+
+Comentarios (/comentarios)
+
+Calificaciones (/calificaciones)
+
+
+
+
+
+
 
 
 
