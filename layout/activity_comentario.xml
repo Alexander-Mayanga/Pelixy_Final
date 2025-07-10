@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondofavorito"
+    tools:context=".activity.ComentarioActivity">
+
+    <TextView
+        android:id="@+id/tvTituloPelicula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="Título de la Película"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPeliculaComentario"
+        android:layout_width="260dp"
+        android:layout_height="280dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloPelicula"/>
+
+    <TextView
+        android:id="@+id/tituloComentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="Dejar un comentario"
+        android:textColor="#FFFF"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPeliculaComentario" />
+
+    <EditText
+        android:id="@+id/etNuevoComentario"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:background="@drawable/fondo_blanco"
+        android:hint="Escribe un comentario..."
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:gravity="top|start"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloComentario" />
+
+    <Button
+        android:id="@+id/btnEnviarComentario"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="24dp"
+        android:text="Enviar"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNuevoComentario" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

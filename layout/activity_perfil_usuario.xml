@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondofavorito">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Imagen de perfil (puedes usar una imagen de prueba por ahora) -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfil de Usuario"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:id="@+id/imagePerfil"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/usuario_default"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:padding="4dp" />
+
+        <!-- Nombre y apellidos -->
+        <TextView
+            android:id="@+id/textNombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jean Fasabi"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:textColor="#FFFF" />
+
+        <!-- Correo -->
+        <TextView
+            android:id="@+id/textCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jean@email.com"
+            android:textSize="16sp"
+            android:textColor="#FFFF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botón: Cambiar foto -->
+        <Button
+            android:id="@+id/btnCambiarFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cambiar Foto"
+            app:backgroundTint="@null"
+            android:background="@drawable/style_btnver"/>
+
+        <!-- Botón: Cambiar contraseña -->
+        <Button
+            android:id="@+id/btnCambiarContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cambiar Contraseña"
+            app:backgroundTint="@null"
+            android:background="@drawable/style_btncalificar"
+            android:layout_marginTop="12dp" />
+
+        <!-- Botón: Cerrar sesión -->
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#D32F2F"
+            app:backgroundTint="@null"
+            android:background="@drawable/style_btneliminar"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

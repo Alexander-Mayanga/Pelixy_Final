@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="210dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_margin="10dp"
+    android:gravity="center_horizontal"
+    android:elevation="4dp"
+    android:layout_gravity="center"
+    android:layout_weight="1">
+
+    <ImageView
+        android:id="@+id/imgFavorito"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/style_radiusfavoritopelicula" />
+
+    <TextView
+        android:id="@+id/txtTituloFavorito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Título de Película"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="11sp"
+        android:paddingTop="8dp"
+        android:gravity="center_horizontal"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/btnVer"
+                android:layout_width="93dp"
+                android:layout_height="34dp"
+                android:text="Ver"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_btnver"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="93dp"
+                android:layout_height="34dp"
+                android:text="Eliminar"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_btneliminar"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCalificar"
+            android:layout_width="95dp"
+            android:layout_height="34dp"
+            android:text="Calificar"
+            android:textSize="12sp"
+            app:backgroundTint="@null"
+            android:background="@drawable/style_btncalificar"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#291818">
+
+    <LinearLayout
+        android:id="@+id/layoutPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="100dp">
+
+        <!-- Barra superior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#F22E2F"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_menu"
+                android:layout_marginEnd="8dp" />
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:iconifiedByDefault="false"
+                android:queryHint="Buscar..." />
+        </LinearLayout>
+
+        <!-- Título Películas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Películas destacadas"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <!-- Carrusel horizontal Peliculas -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/contenedorPeliculas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <!-- Título Series -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Series Populares"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <!-- Carrusel Horizontal - Series -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/contenedorSeries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Puedes dejar aquí tus series estáticas o cargarlas dinámicamente -->
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/reasons" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="13 reasons why"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- ...más series estáticas si deseas -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Título Géneros -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Géneros"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <!-- Botones de géneros -->
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:flexWrap="wrap"
+            app:justifyContent="center">
+
+            <Button
+                android:id="@+id/btnTerror"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Terror"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttonterror"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnDrama"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Drama"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttondrama"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnAccion"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Acción"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttonaccion"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnAventura"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Aventura"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttonaventura"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btnComedia"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Comedia"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttoncomedia"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btnFantasia"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Fantasía"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttonfantasia"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btnThriller"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Thriller"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttonthriller"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btnRomance"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Romance"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttonromance"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btnCienciaFiccion"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Ciencia Ficción"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttoncienciaf"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btnCienciaAnimacion"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Animación"
+                android:layout_margin="6dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/style_buttonanimacion"
+                android:textColor="@android:color/white" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+</ScrollView>
