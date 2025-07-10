@@ -1,0 +1,57 @@
+<section id="comentarios">
+    <div class="wrapper">
+        <div class="container">
+          <img src="./assets/list-icon.png" alt="">
+          <p>Lista de Comentarios</p>
+        </div>
+        <button class="btn-abrir-modal container container_agregar">
+          <img src="./assets/add-icon.png" alt="">
+          <p>Agregar Comentario</p>
+        </button>
+      </div>
+      
+  
+    <div class="tabla-container">
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Película</th>
+            <th>Contenido</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="body-comentarios">
+          <!-- Aquí va el JS -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div id="modal-comentarios" class="modal oculto">
+    <div class="modal-contenido">
+      <span id="btn-cerrar-modal-comentarios" class="cerrar">&times;</span>
+      <h2>Agregar Comentario</h2>
+      <form id="form-comentario" class="formulario-modal">
+        <div class="grupo-form">
+          <label>Usuario ID</label>
+          <input type="number" name="usuario_id" required>
+        </div>
+        <div class="grupo-form">
+          <label>Película ID</label>
+          <input type="number" name="pelicula_id" required>
+        </div>
+        <div class="grupo-form">
+          <label>Contenido</label>
+          <input type="text" name="contenido" required>
+        </div>
+        <button type="submit" class="btn-guardar">Guardar</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="js/comentarios.js"></script>
+  
